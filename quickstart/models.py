@@ -21,4 +21,12 @@ class Klub(models.Model):
     def __str__(self):
         return self.nama
 
+class Mahasiswa(models.Model):
+    nama = models.CharField(max_length=100)
+    nim = models.CharField(max_length=100, unique=True)
+    prodi = models.CharField(max_length=100)
+    fakultas = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.nama
 

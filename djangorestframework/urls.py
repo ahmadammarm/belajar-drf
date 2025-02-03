@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('pemain/', include('quickstart.urls')),
     path('klub/', include('quickstart.urls')),
+    path('mahasiswa/', include('quickstart.urls'))
 ]

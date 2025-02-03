@@ -1,6 +1,6 @@
-from .models import Pemain, Klub
+from .models import Pemain, Klub, Mahasiswa
 from rest_framework import generics
-from .serializer import PemainSerializer, KlubSerializer
+from .serializer import PemainSerializer, KlubSerializer, MahasiswaSerializer
 
 
 
@@ -47,6 +47,27 @@ class KlubDelete(generics.DestroyAPIView):
     queryset = Klub.objects.all()
     serializer_class = KlubSerializer
 
+
+# Mahasiswa API Views
+class MahasiswaList(generics.ListAPIView):
+    queryset = Mahasiswa.objects.all()
+    serializer_class = MahasiswaSerializer
+
+class MahasiswaCreate(generics.CreateAPIView):
+    queryset = Mahasiswa.objects.all()
+    serializer_class = MahasiswaSerializer
+
+class MahasiswaDetail(generics.RetrieveAPIView):
+    queryset = Mahasiswa.objects.all()
+    serializer_class = MahasiswaSerializer
+
+class MahasiswaUpdate(generics.UpdateAPIView):
+    queryset = Mahasiswa.objects.all()
+    serializer_class = MahasiswaSerializer
+
+class MahasiswaDelete(generics.DestroyAPIView):
+    queryset = Mahasiswa.objects.all()
+    serializer_class = MahasiswaSerializer
 
 
 
